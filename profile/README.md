@@ -3,7 +3,7 @@
 ## Booting into special modes
 * **Recovery:**
     * `adb reboot recovery`
-    * With the phone off, press and hold `Volume Up` + `Power`. This is quite tricky since sometimes it doesn't work and the phone ends up booting Android normally.
+    * With the phone off, press and hold `Volume Up` + `Power`. Sometimes this doesn't work and the phone ends up booting Android normally.
 * **Download Mode (with bootloader lock & unlock options):** With the phone off, hold both volume keys & plug the phone to a computer.
 * **Download Mode (only download):** `adb reboot-bootloader`
 
@@ -25,7 +25,7 @@ Before flashing any partition, it's suggested to first flash an **empty vbmeta i
 Due to a bug in the bootloader, recovery and boot images need to be "fixed" before being flashed, otherwise the phone will refuse to boot them with a **"SECURE CHECK FAIL"** error. More info in [this repository](https://github.com/GalaxyA20s/A20s-Fix-Bootable-Image).
 
 [TWRP](https://twrp.me/samsung/samsunggalaxya20s.html) is available for this device but there are some things you must know:
-* If you are on the stock firmware (OneUI), the recovery is replaced by the stock one on each boot, making it hard to actually boot into TWRP.
+* If you are on the stock firmware (OneUI), the recovery is replaced by the stock one on each boot. You must immediately hold volume up after flashing TWRP to boot directly into it.
 * It's not able to access the internal storage nor anything in `/data` unless you disable encryption.
 
 ### GSIs
